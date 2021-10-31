@@ -392,6 +392,9 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
                let indexes = try? NSKeyedUnarchiver.unarchivedArrayOfObjects(ofClass: NSNumber.self, from: itemData) as? [Int] {
                 
                 for index in indexes {
+                    guard index < datasource.count, row < datasource.count else {
+                        continue
+                    }
                     (datasource[index], datasource[row]) = (datasource[row], datasource[index])
                     tableView.moveRow(at: index, to: row)
                 }
@@ -407,6 +410,9 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
                     barButton.coinsOnTable = datasource
                     if var favs = barButton.prefered?.favs  {
                         for index in indexes {
+                            guard index < favs.count, row < favs.count else {
+                                continue
+                            }
                             (favs[index], favs[row]) = (favs[row], favs[index])
                         }
                         barButton.prefered?.favs = favs

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cpdzc.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>ECF60AEE3DE486A675E65A221B5303112C65151E</string>
+				<key>dateExpires</key>
+				<string>2022/10/6</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>J29CW2GN6K.com.rb.ios.wanZJGJ</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>J29CW2GN6K</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>cpdzc.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>aaea94d7-402d-4bb7-94ac-9d5a3cc77566</string>
+				<key>dateExpires</key>
+				<string>2022/10/6</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.rb.ios.wanZJGJ</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>J29CW2GN6K</string>
+				<key>name</key>
+				<string>YUNG WANG</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

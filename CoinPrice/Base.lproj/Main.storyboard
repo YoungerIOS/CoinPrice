@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -304,8 +304,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="taS-Mt-o9H">
+                                <rect key="frame" x="70" y="171" width="15" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="6Dr-k5-xGb"/>
+                                    <constraint firstAttribute="height" constant="15" id="HIE-B9-uGm"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bookmark.circle.fill" catalog="system" imagePosition="only" alignment="center" alternateImage="bookmark.circle" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="u9y-1k-ick">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="taS-Mt-o9H" firstAttribute="leading" secondItem="rvF-0V-RXo" secondAttribute="leading" constant="70" id="09v-cL-096"/>
+                            <constraint firstItem="taS-Mt-o9H" firstAttribute="top" secondItem="28U-lI-Qmh" secondAttribute="bottom" constant="38" id="1ka-tR-3fV"/>
                             <constraint firstItem="Z8n-HS-Xsg" firstAttribute="leading" secondItem="28U-lI-Qmh" secondAttribute="leading" constant="10" id="3gD-c3-IIE"/>
                             <constraint firstItem="28U-lI-Qmh" firstAttribute="leading" secondItem="Wah-EN-svw" secondAttribute="trailing" constant="5" id="6BV-13-ZBU"/>
                             <constraint firstItem="28U-lI-Qmh" firstAttribute="centerY" secondItem="Wah-EN-svw" secondAttribute="centerY" id="Au3-Uq-Cid"/>
@@ -358,5 +371,7 @@
         <image name="NSMenuOnStateTemplate" width="14" height="13"/>
         <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="NSStopProgressFreestandingTemplate" width="15" height="15"/>
+        <image name="bookmark.circle" catalog="system" width="15" height="15"/>
+        <image name="bookmark.circle.fill" catalog="system" width="15" height="15"/>
     </resources>
 </document>

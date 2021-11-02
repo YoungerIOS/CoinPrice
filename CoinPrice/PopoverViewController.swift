@@ -208,12 +208,15 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
         let item = datasource[row]
         guard let ticker = barButton.tickers[item] else { return nil }
         
+        tableColumn?.headerCell.alignment = .center
+        
         //判断所在列
         switch tableColumn {
         case tableview.tableColumns[0]:
             let font = NSFont.boldSystemFont(ofSize: 12)
             text = NSAttributedString(string: item, attributes: [.font: font])
             cellIdentifier = CellIdentifiers.NameCell
+            tableColumn?.headerCell.alignment = .left
             
         case tableview.tableColumns[1]:
             text = makeAttributedString(column: 1, ticker: ticker)
@@ -230,8 +233,6 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
         default:
             break
         }
-
-        tableColumn?.headerCell.alignment = .center
         
         //调用 makeView(withIdentifier:owner:) 来得到一个cell。
         //这个方法通过那个identifier来创建或复用一个cell，然后使用之前提供的数据来填充它

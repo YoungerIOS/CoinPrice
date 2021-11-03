@@ -17,6 +17,7 @@ class PopoverViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet var settingMenu: NSMenu!
     @IBOutlet weak var tableview: NSTableView!
     @IBOutlet var rowMenu: NSMenu!
+    @IBOutlet weak var tableSwitch: NSButton!
     
     var timer: Timer? = nil
     var allowToUpdate: Bool = true
@@ -50,6 +51,10 @@ class PopoverViewController: NSViewController, NSTextFieldDelegate {
         add.target = self
         add.action = #selector(addButtonHandler(_:))
         
+        //切换列表
+        tableSwitch.target = self
+        tableSwitch.action = #selector(switchTableList(_:))
+        tableSwitch.state = NSControl.StateValue.off
         
         //setting按钮功能
         //状态栏详情
@@ -170,7 +175,21 @@ class PopoverViewController: NSViewController, NSTextFieldDelegate {
         UserDefaults.standard.set(shouldLaunch, forKey: "launchAtStartup")
         
     }
-
+    
+    //切换列表
+    @objc func switchTableList(_ sender: NSButton) {
+        if sender.state == NSControl.StateValue.on {
+            datasource = barButton.coinsOnStatusBar
+            tableview.reloadData()
+        }else {
+            datasource = barButton.coinsOnTable
+            tableview.reloadData()
+        }
+        
+        let itemState = self.setting.item(at: 1)?.state
+        self.setting.item(at: 1)?.state = itemState == NSControl.StateValue.off ? NSControl.StateValue.on : NSControl.StateValue.off
+    }
+    
     //状态栏详情
     @objc func statusBarDetail(_ sender: NSMenuItem) {
         sender.state = sender.state == NSControl.StateValue.off ? NSControl.StateValue.on : NSControl.StateValue.off

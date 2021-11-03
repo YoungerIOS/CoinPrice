@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,7 +141,7 @@
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn width="75" minWidth="40" maxWidth="1000" id="9dk-4W-vlT">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Symbol">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title=" Symbol">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -305,20 +305,20 @@
                                 </tableHeaderView>
                             </scrollView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="taS-Mt-o9H">
-                                <rect key="frame" x="70" y="171" width="15" height="21"/>
+                                <rect key="frame" x="70" y="172" width="15.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="6Dr-k5-xGb"/>
                                     <constraint firstAttribute="height" constant="15" id="HIE-B9-uGm"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bookmark.circle.fill" catalog="system" imagePosition="only" alignment="center" alternateImage="bookmark.circle" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="u9y-1k-ick">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star.fill" catalog="system" imagePosition="only" alignment="center" alternateImage="heart.fill" imageScaling="proportionallyUpOrDown" inset="2" id="u9y-1k-ick">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="taS-Mt-o9H" firstAttribute="leading" secondItem="rvF-0V-RXo" secondAttribute="leading" constant="70" id="09v-cL-096"/>
-                            <constraint firstItem="taS-Mt-o9H" firstAttribute="top" secondItem="28U-lI-Qmh" secondAttribute="bottom" constant="38" id="1ka-tR-3fV"/>
+                            <constraint firstItem="taS-Mt-o9H" firstAttribute="top" secondItem="28U-lI-Qmh" secondAttribute="bottom" constant="37" id="1ka-tR-3fV"/>
                             <constraint firstItem="Z8n-HS-Xsg" firstAttribute="leading" secondItem="28U-lI-Qmh" secondAttribute="leading" constant="10" id="3gD-c3-IIE"/>
                             <constraint firstItem="28U-lI-Qmh" firstAttribute="leading" secondItem="Wah-EN-svw" secondAttribute="trailing" constant="5" id="6BV-13-ZBU"/>
                             <constraint firstItem="28U-lI-Qmh" firstAttribute="centerY" secondItem="Wah-EN-svw" secondAttribute="centerY" id="Au3-Uq-Cid"/>
@@ -341,6 +341,7 @@
                         <outlet property="search" destination="28U-lI-Qmh" id="LWA-ec-IWu"/>
                         <outlet property="setting" destination="Wah-EN-svw" id="CqO-KC-c0m"/>
                         <outlet property="settingMenu" destination="7Zp-5s-pGL" id="af7-P3-x8w"/>
+                        <outlet property="tableSwitch" destination="taS-Mt-o9H" id="I6A-ad-QEO"/>
                         <outlet property="tableview" destination="n9c-4d-gQd" id="EuE-43-stv"/>
                         <outlet property="tips" destination="Z8n-HS-Xsg" id="0WM-rI-Njh"/>
                     </connections>
@@ -371,7 +372,7 @@
         <image name="NSMenuOnStateTemplate" width="14" height="13"/>
         <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="NSStopProgressFreestandingTemplate" width="15" height="15"/>
-        <image name="bookmark.circle" catalog="system" width="15" height="15"/>
-        <image name="bookmark.circle.fill" catalog="system" width="15" height="15"/>
+        <image name="heart.fill" catalog="system" width="16" height="14"/>
+        <image name="star.fill" catalog="system" width="17" height="16"/>
     </resources>
 </document>

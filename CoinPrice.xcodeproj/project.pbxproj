@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22060A9527936EEF002754FB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 22060A9427936EEF002754FB /* SwiftyJSON */; };
+		2231D9DE278F757D003004BF /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231D9DD278F757D003004BF /* Speech.swift */; };
+		223A0057281B175800802848 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A0056281B175800802848 /* CustomTableCell.swift */; };
+		223A0059281CC2FB00802848 /* InputTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223A0058281CC2FB00802848 /* InputTableCell.xib */; };
+		22AB5939279B47C4009CE287 /* GCDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB5938279B47C4009CE287 /* GCDTool.swift */; };
+		22AB593B279C8BF2009CE287 /* PostCoinsPriceByEmail.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 22AB593A279C8BF2009CE287 /* PostCoinsPriceByEmail.workflow */; };
+		22F1D128289AEEFF00BF3641 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1D127289AEEFF00BF3641 /* Extensions.swift */; };
 		4205B4AA26FDCE8500AF3C74 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4295755526FD959D002F67B8 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4205B4AB26FDCEA200AF3C74 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205B49C26FDAFD300AF3C74 /* Starscream.framework */; };
-		4205B4B62700225E00AF3C74 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 4205B4B52700225E00AF3C74 /* SwiftyJSON */; };
 		4205B4BA27003F0F00AF3C74 /* BarButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205B4B927003F0F00AF3C74 /* BarButtonController.swift */; };
 		42473E4B2702AFE40014003F /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42473E4A2702AFE40014003F /* Ticker.swift */; };
 		42473E4E270475DD0014003F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42473E4D270475DD0014003F /* EventMonitor.swift */; };
@@ -90,6 +96,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2231D9DD278F757D003004BF /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		223A0056281B175800802848 /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		223A0058281CC2FB00802848 /* InputTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTableCell.xib; sourceTree = "<group>"; };
+		22AB5938279B47C4009CE287 /* GCDTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTool.swift; sourceTree = "<group>"; };
+		22AB593A279C8BF2009CE287 /* PostCoinsPriceByEmail.workflow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PostCoinsPriceByEmail.workflow; sourceTree = "<group>"; };
+		22F1D127289AEEFF00BF3641 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4205B49626FDAFD300AF3C74 /* Starscream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Starscream.xcodeproj; path = Starscream/Starscream.xcodeproj; sourceTree = "<group>"; };
 		4205B4B927003F0F00AF3C74 /* BarButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonController.swift; sourceTree = "<group>"; };
 		42473E4A2702AFE40014003F /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
@@ -124,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4205B4B62700225E00AF3C74 /* SwiftyJSON in Frameworks */,
+				22060A9527936EEF002754FB /* SwiftyJSON in Frameworks */,
 				4205B4AB26FDCEA200AF3C74 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +165,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223A0051281AD57B00802848 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4249E4F626FAEF610060DA46 /* PopoverViewController.swift */,
+				4205B4B927003F0F00AF3C74 /* BarButtonController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		223A0052281B13E600802848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				223A0056281B175800802848 /* CustomTableCell.swift */,
+				223A0058281CC2FB00802848 /* InputTableCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		223A0053281B140200802848 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42473E4A2702AFE40014003F /* Ticker.swift */,
+				428BAA2A270DA7B500300640 /* Preference.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		223A0054281B141300802848 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				42BEBF0E270707D60069DA23 /* Common.swift */,
+				22AB5938279B47C4009CE287 /* GCDTool.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		223A0055281B151300802848 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				4295755326FD93DE002F67B8 /* DataReceiver.swift */,
+				2231D9DD278F757D003004BF /* Speech.swift */,
+				42473E4D270475DD0014003F /* EventMonitor.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		22F1D125289AEE6100BF3641 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22F1D127289AEEFF00BF3641 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		300E0B16AF9F593D332CCE5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,16 +265,16 @@
 			children = (
 				4249E4CA26F9C2800060DA46 /* AppDelegate.swift */,
 				4249E4CE26F9C2830060DA46 /* Assets.xcassets */,
-				4249E4D026F9C2830060DA46 /* Main.storyboard */,
-				4249E4D326F9C2830060DA46 /* Info.plist */,
 				4249E4D426F9C2830060DA46 /* CoinPrice.entitlements */,
-				4249E4F626FAEF610060DA46 /* PopoverViewController.swift */,
-				4205B4B927003F0F00AF3C74 /* BarButtonController.swift */,
-				4295755326FD93DE002F67B8 /* DataReceiver.swift */,
-				42473E4A2702AFE40014003F /* Ticker.swift */,
-				42473E4D270475DD0014003F /* EventMonitor.swift */,
-				42BEBF0E270707D60069DA23 /* Common.swift */,
-				428BAA2A270DA7B500300640 /* Preference.swift */,
+				4249E4D326F9C2830060DA46 /* Info.plist */,
+				4249E4D026F9C2830060DA46 /* Main.storyboard */,
+				22AB593A279C8BF2009CE287 /* PostCoinsPriceByEmail.workflow */,
+				223A0051281AD57B00802848 /* Controller */,
+				223A0052281B13E600802848 /* View */,
+				223A0053281B140200802848 /* Model */,
+				223A0055281B151300802848 /* Module */,
+				22F1D125289AEE6100BF3641 /* Extensions */,
+				223A0054281B141300802848 /* Utility */,
 			);
 			path = CoinPrice;
 			sourceTree = "<group>";
@@ -263,7 +329,7 @@
 			);
 			name = CoinPrice;
 			packageProductDependencies = (
-				4205B4B52700225E00AF3C74 /* SwiftyJSON */,
+				22060A9427936EEF002754FB /* SwiftyJSON */,
 			);
 			productName = CoinPrice;
 			productReference = 4249E4C726F9C2800060DA46 /* CoinPrice.app */;
@@ -357,7 +423,7 @@
 			);
 			mainGroup = 4249E4BE26F9C27F0060DA46;
 			packageReferences = (
-				4205B4B42700225E00AF3C74 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				22060A9127936EA3002754FB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 4249E4C826F9C2800060DA46 /* Products */;
 			projectDirPath = "";
@@ -399,8 +465,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AB593B279C8BF2009CE287 /* PostCoinsPriceByEmail.workflow in Resources */,
 				4249E4CF26F9C2830060DA46 /* Assets.xcassets in Resources */,
 				4249E4D226F9C2830060DA46 /* Main.storyboard in Resources */,
+				223A0059281CC2FB00802848 /* InputTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +502,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AB5939279B47C4009CE287 /* GCDTool.swift in Sources */,
+				2231D9DE278F757D003004BF /* Speech.swift in Sources */,
 				42BEBF0F270707D60069DA23 /* Common.swift in Sources */,
 				4249E4F726FAEF610060DA46 /* PopoverViewController.swift in Sources */,
+				223A0057281B175800802848 /* CustomTableCell.swift in Sources */,
 				428BAA2B270DA7B500300640 /* Preference.swift in Sources */,
 				42473E4B2702AFE40014003F /* Ticker.swift in Sources */,
 				4205B4BA27003F0F00AF3C74 /* BarButtonController.swift in Sources */,
 				4295755426FD93DE002F67B8 /* DataReceiver.swift in Sources */,
 				42473E4E270475DD0014003F /* EventMonitor.swift in Sources */,
 				4249E4CB26F9C2800060DA46 /* AppDelegate.swift in Sources */,
+				22F1D128289AEEFF00BF3641 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +705,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = J29CW2GN6K;
+				DEVELOPMENT_TEAM = 4R3C829UL3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CoinPrice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,7 +728,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = J29CW2GN6K;
+				DEVELOPMENT_TEAM = 4R3C829UL3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CoinPrice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -765,7 +837,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J29CW2GN6K;
+				DEVELOPMENT_TEAM = 4R3C829UL3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainAppHelper/Info.plist;
@@ -798,7 +870,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J29CW2GN6K;
+				DEVELOPMENT_TEAM = 4R3C829UL3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainAppHelper/Info.plist;
@@ -871,20 +943,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4205B4B42700225E00AF3C74 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		22060A9127936EA3002754FB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4205B4B52700225E00AF3C74 /* SwiftyJSON */ = {
+		22060A9427936EEF002754FB /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4205B4B42700225E00AF3C74 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = 22060A9127936EA3002754FB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

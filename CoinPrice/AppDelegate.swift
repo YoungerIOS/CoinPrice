@@ -7,16 +7,18 @@
 
 import Cocoa
 
-let barButton = BarButtonController() //Tips:在AppDelegate中声明的全局变量将构成单例
+let mainController = BarButtonController() //Tips:在AppDelegate中声明的全局变量将构成单例
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-//    let barButton = BarButtonController()
+//    let mainController = BarButtonController()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        barButton.setUpStatusBarButton()
+        mainController.setUpStatusBarButton()
         
+        //此句代码可删除本地所有使用UserDefaults存储的数据
+//        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier ?? "")
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -24,6 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
-        barButton.refreshAllCoins()
+        mainController.refreshAllCoins()
     }
 }

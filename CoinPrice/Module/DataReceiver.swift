@@ -11,9 +11,9 @@ import Starscream
 class DataReceiver: NSObject, WebSocketDelegate {
     
     var socket: WebSocket!
-    var isConnected = false
     let server = WebSocketServer()
     var callback: (String) -> Void = {_ in }
+    var failureCallback: () -> Void = {}
     var isReceivingText = false
     
     func requestSingleStream(param: String, handler: @escaping (String) -> Void) {
@@ -40,8 +40,9 @@ class DataReceiver: NSObject, WebSocketDelegate {
         
     }
     
-    func requestCombinedStream(params: [String], handler: @escaping (String) -> Void) {
+    func requestCombinedStream(params: [String], handler: @escaping (String) -> Void, failure: @escaping () -> Void) {
         callback = handler
+        failureCallback = failure
 
 //        let urlString = "wss://fstream.binance.com/stream?streams=btcaaausdt@ticker"
         let urlString = splicingUrlWithStrings(array: params)
@@ -72,20 +73,18 @@ class DataReceiver: NSObject, WebSocketDelegate {
         socket.write(string: "hello there!")
     }
     
-    
     // MARK: - WebSocketDelegate
     func didReceive(event: WebSocketEvent, client: WebSocketClient) {
         switch event {
         case .connected(let headers):
-            isConnected = true
             print("websocket is connected: \(headers)")
         case .disconnected(let reason, let code):
-            isConnected = false
+            failureCallback()
             print("websocket is disconnected: \(reason) with code: \(code)")
         case .text(let string):
-            print("Received text: \(string)")
             isReceivingText = true
-            self.callback(string)
+            callback(string)
+            string.isEmpty ? failureCallback() : nil
         case .binary(let data):
             print("Received data: \(data.count)")
         case .ping(_):
@@ -97,10 +96,10 @@ class DataReceiver: NSObject, WebSocketDelegate {
         case .reconnectSuggested(_):
             break
         case .cancelled:
-            isConnected = false
+            break
         case .error(let error):
-            isConnected = false
             handleError(error)
+            failureCallback()
         }
     }
 

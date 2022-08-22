@@ -268,7 +268,7 @@ class BarButtonController: NSViewController {
         
         //计数，用于隔一定时间重新请求数据，防止断联
         heartBeatCounter += 1
-        heartBeatCounter % 1000 == 0 ? refreshAllCoins() : nil
+        heartBeatCounter % 200 == 0 ? refreshAllCoins() : nil
     
     }
     
